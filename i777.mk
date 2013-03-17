@@ -31,8 +31,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
 
 # Packages
-PRODUCT_PACKAGES += \
-    GalaxyS2Settings
+#PRODUCT_PACKAGES += \
+#    GalaxyS2Settings
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -52,6 +52,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/idc/melfas_ts.idc:system/usr/idc/melfas_ts.idc \
     $(LOCAL_PATH)/usr/idc/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc \
     $(LOCAL_PATH)/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
+
+# Ubuntu-Session
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/ubuntu-session:system/ubuntu-session \
+    $(LOCAL_PATH)/ubuntu/99ubuntu-session:system/etc/init.d/99ubuntu-session
 
 # NFC
 PRODUCT_PACKAGES += \
